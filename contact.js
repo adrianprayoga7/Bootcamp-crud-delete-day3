@@ -50,34 +50,6 @@ const deleteContact = nama => {
     console.log("Contact Telah Dihapus!");
 }
 
-//tujuannya untuk mengubah kontak
-const editContact = (namaLama, nama, tlp, email) => {
-  const detailLama = detailContact(namaLama);
-  let newName;
-  let newTlp;
-  let newEmail;
-  if (nama === undefined) {
-    newName = detailLama.nama;
-  } else {
-    newName = nama;
-  }
-
-  if (tlp === undefined) {
-    newTlp = detailLama.tlp;
-  } else {
-    newTlp = tlp;
-  }
-
-  if (email === undefined) {
-    newEmail = detailLama.email;
-  } else {
-    newEmail = email;
-  }
-  deleteContact(namaLama);
-  answer(newName, newTlp, newEmail);
-  console.log("Data Contact Telah Diubah!");
-}
-
 //tujuannya untuk parsing data dari nama,tlp,email ke contacts.json
 const answer = (nama,tlp,email) => {
   const contact = {nama,tlp,email};

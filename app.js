@@ -70,36 +70,6 @@ yargs.command ({
     },
   });
 
-  //fungsi untuk mengedit kontak
-  yargs.command ({
-    command: "update",
-    describe: "Update Contact",
-    builder: {
-        namaLama: {
-            describe: "Contact Nama Lama",
-            demandOption: true,
-            type: "string",
-        },
-        nama: {
-            describe: "Contact Nama",
-            demandOption: true,
-            type: "string",
-        },
-        tlp : {
-            describe: 'contact Telepon',
-            demandOption: true,
-            type: 'string',
-        },
-        email: {
-            describe: 'contact Email',
-            demandOption: false,
-            type: 'string',
-        },
-    },
-    handler(argv) {
-        contact.editContact(argv.namaLama, argv.nama, argv.tlp, argv.email);
-    },
-  });
   
   //tujuannya untuk menjalankan kode di yargs.command
   //yargs.parse harus selalu ada
