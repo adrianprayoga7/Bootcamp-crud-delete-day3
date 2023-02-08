@@ -83,4 +83,4 @@ fs.writeFileSync('data/contacts.json', JSON.stringify(contacts));
 console.log('Terima kasih');
 };
 
-module.exports = {answer, detailContact, loadContact, listContact, deleteContact, editContact};
+module.exports = {answer, detailContact, loadContact, listContact, deleteContact};
